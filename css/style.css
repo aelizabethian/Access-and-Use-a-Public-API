@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333533;
+  padding-top: 70px;
+  margin: 0 auto;
+  margin-top: -100px;
+  padding-bottom: 40px;
+  margin-bottom: 70px;
+  border-bottom: 5px solid rgb(245, 203, 92);
+}
+
+.searchDiv {
+  margin: 0 auto;
+}
+
+.search {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+html {
+  position: relative;
+}
+body {
+  background-color: #cfdbd5;
+  margin-top: 75px;
+  color: #333533;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #cfdbd5;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.avatar {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  border-radius: 9999px;
+  justify-self: center;
+  align-self: center;
+}
+
+.name {
+  padding-top: 8px;
+}
+
+.address {
+  padding-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 50px;
+  width: 90%;
+  margin: 0 auto;
+  padding-right: 0;
+}
+
+.card {
+  background-color: #e8eddf;
+  border: 2px solid rgb(245, 203, 92);
+  box-shadow: 0 2px 5px rgba(245, 203, 92, 0.1);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  padding: 12px;
+  width: 330px;
+  margin: 0 auto;
+  transition: 0.5s ease all;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  width: 325px;
+  position: relative;
+  text-align: center;
+  margin: 200px auto auto;
+  padding: 30px 20px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+  border: 1px solid #778;
+  background: #fff;
+}
+
+.modal p {
+  font-size: 15px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 6px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+}
+
+.modal_avatar {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 9999px;
+}
+
+.text-container .name,
+.text-container .address,
+.text-container .email {
+  margin: 10px;
+  max-width: 100%;
+}
+
+.modalDivider {
+  margin: 15px;
+  margin-bottom: 25px;
+  border: 1px solid rgb(245, 203, 92);
+}
+
+.birthday {
+  margin-bottom: 20px;
+}
+
+.searchHide {
+  display: none;
+}
+
+.noSearch {
+  color: whitesmoke;
+  margin-top: 10px;
+}
+
+.leftArrow,
+.rightArrow {
+  display: none;
+  width: 15px;
+  height: 15px;
+  transition: 0.5s;
+  float: left;
+  cursor: pointer;
+  box-shadow: -4px 4px 0 rgb(245, 203, 92);
+  position: absolute;
+  right: 190px;
+  bottom: 20px;
+}
+
+.leftArrow {
+  transform: rotate(45deg);
+  margin-right: 10px;
+}
+
+.rightArrow {
+  transform: rotate(225deg);
+  margin-left: 10px;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  box-shadow: -4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+@media (min-width: 769px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .searchDiv {
+    margin-right: 50px;
+  }
+
+  .grid-container {
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-content: center;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .modal {
+    width: 400px;
+    margin: 250px auto auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 42px;
+    letter-spacing: 1.3px;
+  }
+
+  .search {
+    width: 250px;
+  }
+  .grid-container {
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+  }
+
+  .card {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 42px;
+    letter-spacing: 1.3px;
+    margin-left: 75px;
+  }
+
+  .search {
+    margin-right: 75px;
+  }
+  .grid-container {
+    margin: 75px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+  }
+
+  .card {
+    width: 375px;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 46px;
+    letter-spacing: 1.5px;
+    margin-left: 100px;
+  }
+
+  .grid-container {
+    margin: 100px auto;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 60px;
+  }
+
+  .card {
+    width: 400px;
+  }
+}
